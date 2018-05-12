@@ -1,0 +1,14 @@
+version: '2'
+services:
+    trainxing-app:
+        image: trainxing
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://trainxing-mysql:3306/trainxing?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    trainxing-mysql:
+        extends:
+            file: mysql.yml
+            service: trainxing-mysql
