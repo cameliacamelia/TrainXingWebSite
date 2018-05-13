@@ -693,12 +693,9 @@
                             </webResources>
                         </configuration>
                     </plugin>
+
                 </plugins>
             </build>
-            <properties>
-                <!-- default Spring profiles -->
-                <spring.profiles.active>dev${profile.no-liquibase}</spring.profiles.active>
-            </properties>
         </profile>
         <profile>
             <id>prod</id>
