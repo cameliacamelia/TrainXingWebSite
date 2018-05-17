@@ -4,7 +4,7 @@
 
     <groupId>com.hacktm.trainxing</groupId>
     <artifactId>train-xing</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Train Xing</name>
 
@@ -693,19 +693,12 @@
                             </webResources>
                         </configuration>
                     </plugin>
-                    <plugin>
-                        <groupId>com.heroku.sdk</groupId>
-                        <artifactId>heroku-maven-plugin</artifactId>
-                        <version>2.0.3</version>
-                        <configuration>
-                            <appName>Train Xing</appName>
-                            <processTypes>
-                                <web>java $JAVA_OPTS -cp target/train-xing-1.0.0-SNAPSHOT.war</web>
-                            </processTypes>
-                        </configuration>
-                    </plugin>
                 </plugins>
             </build>
+            <properties>
+                <!-- default Spring profiles -->
+                <spring.profiles.active>dev${profile.no-liquibase}</spring.profiles.active>
+            </properties>
         </profile>
         <profile>
             <id>prod</id>
