@@ -694,18 +694,23 @@
                         </configuration>
                     </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <executions>
-                            <execution>
-                                <id>copy-dependencies</id>
-                                <phase>package</phase>
-                                <goals><goal>copy-dependencies</goal></goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
+                    <groupId>com.heroku.sdk</groupId>
+                    <artifactId>heroku-maven-plugin</artifactId>
+                    <version>1.1.1</version>
+                    <configuration>
+                        <appName>train-xing</appName>
+                        <includeTarget>false</includeTarget>
+                        <includes>
+                            <include>target/train-xing-1.0.0-SNAPSHOT.war</include>
+                        </includes>
+                        <jdkVersion>1.8</jdkVersion>
+                        <processTypes>
+                            <web>java $JAVA_OPTS -jar target/train-xing-1.0.0-SNAPSHOT</web>
+                        </processTypes>
+                    </configuration>
+                </plugin>
+
+            </plugins>
             </build>
             <properties>
                 <!-- default Spring profiles -->
