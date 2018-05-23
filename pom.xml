@@ -54,6 +54,7 @@
         <maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
+        <heroku-maven-plugin.version>2.0.3</heroku-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.3.4</dockerfile-maven-plugin.version>
         <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
         <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
@@ -693,22 +694,22 @@
                             </webResources>
                         </configuration>
                     </plugin>
-                    <plugin>
-                    <groupId>com.heroku.sdk</groupId>
-                    <artifactId>heroku-maven-plugin</artifactId>
-                    <version>1.1.1</version>
-                    <configuration>
-                        <appName>train-xing</appName>
-                        <includeTarget>false</includeTarget>
-                        <includes>
-                            <include>target/train-xing-1.0.0-SNAPSHOT.war</include>
-                        </includes>
-                        <jdkVersion>1.8</jdkVersion>
-                        <processTypes>
-                            <web>java $JAVA_OPTS -jar target/train-xing-1.0.0-SNAPSHOT</web>
-                        </processTypes>
-                    </configuration>
-                </plugin>
+                    <!--<plugin>-->
+                    <!--<groupId>com.heroku.sdk</groupId>-->
+                    <!--<artifactId>heroku-maven-plugin</artifactId>-->
+                    <!--<version>${heroku-maven-plugin.version}</version>-->
+                    <!--<configuration>-->
+                        <!--<appName>train-xing</appName>-->
+                        <!--<includeTarget>true</includeTarget>-->
+                        <!--<includes>-->
+                            <!--<include>target/train-xing-1.0.0-SNAPSHOT.war</include>-->
+                        <!--</includes>-->
+                        <!--<jdkVersion>1.8</jdkVersion>-->
+                        <!--<processTypes>-->
+                            <!--<web>java $JAVA_OPTS -jar target/train-xing-1.0.0-SNAPSHOT</web>-->
+                        <!--</processTypes>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
 
             </plugins>
             </build>
