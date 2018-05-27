@@ -1,10 +1,31 @@
 <div class="row">
     <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
+        <span class="saint-andrew img-fluid rounded"></span>
     </div>
     <div class="col-md-9">
-        <h1 class="display-4">Welcome, Java Hipster!</h1>
-        <p class="lead">This is your homepage</p>
+        <h1 class="display-4">TrainXing</h1>
+        <p class="lead">Train Level Crossing Solution</p>
+
+        <h2>Overview</h2>
+        <p>Most crossings in Europe and around the world are marked by some form of saltire (Saint Andrews Cross) to warn road users about a level crossing and/or about a level crossing with no barriers whatsoever. This cross is on a level crossing in Slovenia.
+            <br><br>
+            Trains have a much larger mass relative to their braking capability, and thus a far longer braking distance than road vehicles. With rare exceptions, trains do not stop at level crossings and rely on vehicles and pedestrians to clear the tracks in advance.
+            <br>
+            Level crossings constitute a significant safety concern internationally. On average, each year around 400 people in the European Union[3] and over 300 in the United States[4] are killed in level crossing accidents. Collisions can occur with vehicles as well as pedestrians; pedestrian collisions are more likely to result in a fatality.[5] Among pedestrians, young people (5–19 years), older people (60 years and over) and males are considered to be high risk users.[6]
+            <br>
+            In Romania:
+            <ul>
+                <li>3500 accidents/year</li>
+                <li>45 deaths</li>
+                <li>CFR  would pay ~100.000 $ to buy barriers</li>
+            </ul>
+        </p>
+
+        <h2>Solution</h2>
+        <p>Our system warns the drivers by emitting light signals when it captures train arrival signal.</p>
+        <div class="col-md-3">
+            <span class="solution img-fluid rounded"></span>
+        </div>
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
@@ -22,20 +43,6 @@
             </div>
         </div>
 
-        <p>
-            If you have any question on JHipster:
-        </p>
 
-        <ul>
-            <li><a href="http://www.jhipster.tech/" target="_blank" rel="noopener">JHipster homepage</a></li>
-            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener">JHipster on Stack Overflow</a></li>
-            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener">JHipster bug tracker</a></li>
-            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener">JHipster public chat room</a></li>
-            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener">follow @java_hipster on Twitter</a></li>
-        </ul>
-
-        <p>
-            <span>If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">GitHub</a>!
-        </p>
     </div>
 </div>
